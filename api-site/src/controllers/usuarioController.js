@@ -63,6 +63,11 @@ function cadastrar(req, res) {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
+    var filme1 = req.body.filme1;
+    var filme2 = req.body.filme2;
+    var filme3 = req.body.filme3;
+
+
 
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -70,8 +75,14 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
+    } else if (filme1 == undefined) {
+        res.status(400).send("Filme 1 está undefined!");
+    } else if (filme2 == undefined) {
+        res.status(400).send("Filme 2 está undefined!");
+    } else if (filme3 == undefined) {
+        res.status(400).send("Filme 3 está undefined!");
     } else {
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, filme1, filme2, filme3)
             .then(
                 function (resultado) {
                     res.json(resultado);

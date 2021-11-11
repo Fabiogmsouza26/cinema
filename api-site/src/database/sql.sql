@@ -28,15 +28,18 @@ CREATE TABLE medida (
 
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+CREATE DATABASE cinema;
 
-USE acquatec;
+USE cinema;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+	filme1 VARCHAR(150),
+	filme2 VARCHAR(150),
+    filme3 VARCHAR(150)
 );
 
 CREATE TABLE aviso (

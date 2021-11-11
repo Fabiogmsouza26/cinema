@@ -38,10 +38,14 @@
         <br><br>
         <form id='form_cadastro' onsubmit="return cadastrar()">
             <div class='text-form'>INFORME OS DADOS PARA PODERMOS NOS CONHECER</div>
-            <input placeholder='Nome completo' name="nome" type="text" autocomplete="off">
-            <input placeholder='E-mail' name="email" type="text" autocomplete="off">
-            <input name="senha" type="password" placeholder="******">
-            <input name="confirmacao-senha" type="password" placeholder="******">
+            <input placeholder='Nome completo' name="nome" autocomplete="off">
+            <input placeholder='E-mail' name="email" autocomplete="off">
+            <input type="password" placeholder="******" name="senha">
+            <input type="password" placeholder="******" name="confirmacao-senha">
+            <div class='text-form'>INFORME TRÊS FILMES QUE MARCARAM SUA VIDA</div>
+            <input name="filme1" placeholder='Primeiro filme'>
+            <input name="filme2" placeholder='Segundo filme'>
+            <input name="filme3" placeholder='Terceiro filme'>
             <br><br>
             <button class="btn">Cadastrar</button>
 
