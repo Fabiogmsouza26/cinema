@@ -38,17 +38,27 @@
         <br><br>
         <form id='form_cadastro' onsubmit="return cadastrar()">
             <div class='text-form'>INFORME OS DADOS PARA PODERMOS NOS CONHECER</div>
-            <input placeholder='Nome completo' name="nome" autocomplete="off">
-            <input placeholder='E-mail' name="email" autocomplete="off">
-            <input type="password" placeholder="******" name="senha">
-            <input type="password" placeholder="******" name="confirmacao-senha">
+            <input placeholder='Nome completo' name="nome" onkeyup="validacoes()" autocomplete="off">
+            <input placeholder='E-mail' name="email" id="email_input" onkeyup="validacoes()" autocomplete="off">
+            <div id="valid_email"
+                style="color:whitesmoke; display:none; font-family: 'Aspergit Bold', sans-serif; font-size:16px; margin-right: 45%">
+                E-mail válido!<br><br></div>
+            <input type="password" placeholder="Senha - mínimo de 6 caracteres" name="senha" id="senha_valida"
+                onkeyup="validacoes()">
+            <div id="valid_password"
+                style="color:whitesmoke; display:none; font-family: 'Aspergit Bold', sans-serif; font-size:16px; margin-right: 45%">
+                Senha válida!<br><br></div>
+            <input type="password" placeholder="Confirme sua senha" name="confirmacao-senha" id="senha_confirm"
+                onkeyup="validacoes()">
+            <div id="valid_confirm"
+                style="color:whitesmoke; display:none; font-family: 'Aspergit Bold', sans-serif; font-size:16px; margin-right: 26.5%">
+                Confirmação válida!<br><br></div>
             <div class='text-form'>INFORME TRÊS FILMES QUE MARCARAM SUA VIDA</div>
             <input name="filme1" placeholder='Primeiro filme'>
             <input name="filme2" placeholder='Segundo filme'>
             <input name="filme3" placeholder='Terceiro filme'>
             <br><br>
             <button class="btn">Cadastrar</button>
-
         </form>
         <br><br>
     </main>
@@ -57,7 +67,7 @@
     </div>
 
     <div id="div_erros_login"></div>
-    
+
     <div id='cinema-text2'>
         <p id='cinema-text2-p'>Arte é o estado criativo de articular suas emoções, pensamentos
             e experiências em uma obra que se relacione com a sua vida e a vida de outras pessoas. É transmitir
@@ -100,34 +110,42 @@
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
 
-        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        emailAddress = email_input.value;
+
+        if (emailAddress.indexOf('@') == -1 || emailAddress.indexOf('.com') == -1 || emailAddress.length <= 5) {
+
+            alert("E-mail inválido! Por favor, corrija para prosseguir.");
+
+            finalizarAguardar();
+            return false;
+
+        }
+
+
+        if (senha.length < 6) {
+
+            alert("Senha deve conter ao menos 6 caracteres! Por favor, corrija para prosseguir.");
+
+            finalizarAguardar();
+            return false;
+
+        }
+
+
+        if (passwordValid !== passwordConfirmation) {
+
+            alert("Senha e confirmação não são iguais. Por favor, corrija para prosseguir.");
+
+            finalizarAguardar();
+            return false;
+
+        }
+
+
         if (nome == "" || email == "" || senha == "" || confirmacaoSenha == "") {
 
             alert("Preencha todos os campos para prosseguir!");
-            if (nome == "") {
-                console.log('nome está em branco')
-            }
-            if (email == "") {
-                console.log('email está em branco')
-            }
-            if (senha == "") {
-                console.log('senha está em branco')
-            }
-            if (confirmacaoSenha == "") {
-                console.log('confirmacaoSenha está em branco')
-            }
-            finalizarAguardar();
-            return false;
-        }
 
-        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
-            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
-            return false;
-        }
-
-        if (senha != confirmacaoSenha) {
-            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
             finalizarAguardar();
             return false;
         }
@@ -154,5 +172,54 @@
 
         return false;
     }
+
+    function validacoes() {
+
+        aguardar();
+
+        emailAddress = email_input.value;
+        passwordValid = senha_valida.value;
+        passwordConfirmation = senha_confirm.value;
+
+        if (emailAddress.indexOf('@') > -1 && emailAddress.indexOf('.com') > -1 && emailAddress.length > 5) {
+
+            valid_email.style.display = 'block';
+
+        }
+
+        if (emailAddress.startsWith('@') || emailAddress.startsWith('.com')) {
+
+            valid_email.style.display = 'none';
+
+        }
+
+
+        if (passwordValid.length > 5) {
+
+            valid_password.style.display = 'block';
+
+        } else if (passwordValid.length < 6) {
+
+            valid_password.style.display = 'none';
+
+        }
+
+        if (passwordConfirmation !== passwordValid && passwordConfirmation.length >= 6) {
+
+            valid_confirm.style.display = 'block';
+            valid_confirm.innerHTML = 'Confirmação de senha incorreta.'
+
+        } else if (passwordConfirmation == passwordValid && passwordValid.length >= 6) {
+
+            valid_confirm.style.display = 'block';
+            valid_confirm.innerHTML = 'Confirmação de senha válida!'
+
+        } else if (passwordConfirmation.length < 6) {
+
+            valid_confirm.style.display = 'none';
+
+        }
+    }
+
 
 </script>
