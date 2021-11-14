@@ -22,6 +22,19 @@ header {
 
 }
 
+header a{
+  
+  text-decoration: none;
+  color: #fff5cb;
+ 
+ }
+
+ header a:hover{
+  
+  color: #f3e191;
+ 
+ }
+
 #title-header {
 
     margin-left: 3%;
@@ -45,6 +58,12 @@ li {
 
 }
 
+
+li:hover {
+
+  transform: scale(1.1);
+
+}
 
 main {
     width: 75vw;
