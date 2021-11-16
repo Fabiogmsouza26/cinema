@@ -30,20 +30,19 @@
     <main>
         <section id='content-sobre'>
             <div id='text_cinema'>
-                Eu me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
-                Eu descobriria depois que tudo começou com os irmãos Lumière, em 1985,
-                graças ao invento do cinematógrafo.
+                Me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
+                Eu descobri depois que tudo começou com os irmãos Lumière, em 1985,
+                graças ao cinematógrafo. Arte e ciência são a combinação perfeita para explorar a
+                <b>criatividade</b>.
                 <br><br>
-                Arte e ciência me pareciam a combinação perfeita para explorar a
-                <b>criatividade</b> e entender mais sobre a vida.
-                <br><br>
-                A combinação de arte, ciência e técnica abriram portas para o primeiro
-                filme de ficção científica: Viagem à Lua, de 1902.
-                <br><br>
+                <div id='texts_subtitles'>
+                    <img class='image_text' src='css/images/trainciotat.gif'>
+                    <div class='image_subtitle'><i>L'Arrivée d'un train à La Ciotat</i></div>
+                </div>
             </div>
-            <div style='clear:both'>
-                <button class='botao' onclick='previous()'>ANTERIOR</button>
-                <button class='botao' onclick='next()'>PRÓXIMO</button>
+            <div id='buttons'>
+                <button id='botao1' onclick='previous()'>RETORNAR</button>
+                <button id='botao2' onclick='next()'>CONTINUAR</button>
             </div>
             <img id='chaplin-curious' src='css/images/chaplin-curious.gif'>
         </section>
@@ -85,30 +84,35 @@
 
         var text = text_cinema.innerHTML;
 
-        if (text.indexOf("Eu me lembro dos meus primeiros contatos com cinema.") > -1) {
+        if (text.indexOf("Me lembro") > -1) {
 
-        text_cinema.innerHTML = `A Nouvelle Vague foi marcante quando ingressei na
+            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>A Nouvelle Vague foi marcante quando ingressei na
         faculdade de Publicidade. A revolução na forma de fazer cinema por meio de abordagens
-        cotidianas e quebra da linearidade narrativa mostra inovação.
+        cotidianas e quebra da linearidade narrativa mostra inovação.</span>
         <br><br>
-        <div id='texts_subtitles'>
+        <div id='texts_subtitles' style='animation: fadeIn 5s;'>
         <img class='image_text' src='css/images/hiroshima-mon-amour.gif'>
         <div class='image_subtitle'><i>Hiroshima mon amour</i></div>
         </div>
         `
+
+            botao1.style.visibility = 'visible';
+
         }
 
         else if (text.indexOf("A Nouvelle Vague foi marcante") > -1) {
 
-            text_cinema.innerHTML = `O Expressionismo Alemão foi outro movimento 
+            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>O Expressionismo Alemão foi outro movimento 
             artístico marcante para mim. O uso acentuado de maquiagem, formas abstratas 
             e distorcidas para externalizar sonhos e sentimentos denotam clara
-            autenticidade na forma de enxergar a vida.<br><br>
-            <div id='texts_subtitles'>
+            autenticidade na forma de enxergar a vida.</span><br><br>
+            <div id='texts_subtitles' style='animation: fadeIn 5s;'>
             <img class='image_text' src='css/images/nosferatu.gif'>
             <i span class='image_subtitle'>Nosferatu</i>
             </div>
             `
+            botao2.style.display = 'none';
+
         }
     }
 
@@ -119,33 +123,38 @@
 
         if (text.indexOf("A Nouvelle Vague foi marcante") > -1) {
 
-        text_cinema.innerHTML = `Eu me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
-                Eu descobriria depois que tudo começou com os irmãos Lumière, em 1985,
-                graças ao invento do cinematógrafo.
+            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>Me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
+                Eu descobri depois que tudo começou com os irmãos Lumière, em 1985,
+                graças ao cinematógrafo. Arte e ciência são a combinação perfeita para explorar a
+                <b>criatividade</b>.</span>
                 <br><br>
-                Arte e ciência me pareciam a combinação perfeita para explorar a
-                <b>criatividade</b> e entender mais sobre a vida.
-                <br><br>
-                A combinação de arte, ciência e técnica abriram portas para o primeiro
-                filme de ficção científica: Viagem à Lua, de 1902.
-                <br><br>
+                <div id='texts_subtitles' style='animation: fadeIn 5s;'>
+                <img class='image_text' src='css/images/trainciotat.gif'>
+                <div class='image_subtitle'><i>L'Arrivée d'un train à La Ciotat</i></div>
+                </div></span>
+                
         `
+            botao1.style.visibility = 'hidden';
+            botao2.style.display = 'block';
+
         }
 
         if (text.indexOf("Expressionismo Alemão") > -1) {
 
-        text_cinema.innerHTML = `A Nouvelle Vague foi marcante quando ingressei na
+            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>A Nouvelle Vague foi marcante quando ingressei na
         faculdade de Publicidade. A revolução na forma de fazer cinema por meio de abordagens
-        cotidianas e quebra da linearidade narrativa mostra inovação.
+        cotidianas e quebra da linearidade narrativa mostra inovação.</span>
         <br><br>
-        <div id='texts_subtitles'>
+        <div id='texts_subtitles' style='animation: fadeIn 5s;'>
         <img class='image_text' src='css/images/hiroshima-mon-amour.gif'>
         <div class='image_subtitle'><i>Hiroshima mon amour</i></div>
         </div>
         `
+            botao2.style.display = 'block';
+
         }
-        
-        
+
+
     }
 
 </script>

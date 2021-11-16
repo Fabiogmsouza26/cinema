@@ -95,6 +95,8 @@ main {
   font-size: 21px;
   text-align:justify;
   line-height: 1.0cm;
+  animation: fadeIn 5s;
+
    
 }
 
@@ -107,18 +109,55 @@ main {
 
 }
 
-.botao {
 
-  margin-top: -15%;
-  margin-left: 10%;
+#buttons {
+clear:both;
+display: flex;
+justify-content:start;
+margin-left: 5%;
+
+
+}
+
+#botao1 {
+
   color:whitesmoke;
   border: 3px solid rgb(66, 66, 66);
   border-radius: 15px;
   background: linear-gradient(45deg, #ac9b40,#9e8d2c, #8f7e22, #756715, #5e5107);  
-  width: 14%;
-  font-size: 32px;
+  width: 16%;
+  font-size: 30px;
   font-family: 'Modum', sans-serif;
   height: 8vh;
+  margin-right:24%;
+  cursor: pointer;
+  visibility:hidden;
+}
+
+#botao2 {
+
+  color:whitesmoke;
+  border: 3px solid rgb(66, 66, 66);
+  border-radius: 15px;
+  background: linear-gradient(45deg, #ac9b40,#9e8d2c, #8f7e22, #756715, #5e5107);  
+  width: 16%;
+  font-size: 30px;
+  font-family: 'Modum', sans-serif;
+  height: 8vh;
+  margin-right:24%;
+  cursor: pointer;
+}
+
+#botao1:hover {
+
+  color:whitesmoke;
+  background: url('images/grain.webp');  
+}
+
+#botao2:hover {
+
+  color:whitesmoke;
+  background: url('images/grain.webp');  
 }
 
 #texts_subtitles {
@@ -134,6 +173,7 @@ main {
 .image_text {
 
   width:400px; 
+  height:253px;
   border-radius:20px; 
   box-shadow:-1px 1px 2px 3px rgb(34, 34, 34); 
 
@@ -249,38 +289,12 @@ footer {
 }
 
 
-@keyframes changeBg{
-    0%,100%  {background-image: url("images/img1.jpg");}
-    25% {background-image: url("images/img2.jpg");}
-    50% {background-image: url("images/img3.jpg");}
-    75% {background-image: url("images/img4.jpg");}
- }
+@keyframes fadeIn {
 
+  0% {opacity:0;}
+  100% {opacity:1;}
 
- @keyframes frase1anim {
-    0%{
-      opacity: 0;
-    }
-    25%{
-      opacity: 1;
-    }
-    50% {
-      opacity:0;
-    }
-  }
-   
-  @keyframes frase2anim {
-    51%{
-      opacity: 0;
-    }
-    75%{
-      opacity: 1;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-
+}
 
 @font-face {
 
