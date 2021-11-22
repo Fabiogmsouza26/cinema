@@ -98,6 +98,29 @@ input {
     color: #E3D181;
 }
 
+
+select {
+
+    width: 57%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    height: 45px;
+    border: 3px solid #E3D181;
+    border-radius: 15px;
+    font-family: 'Aspergit Bold', sans-serif;
+    font-size: 18px;
+    color: #E3D181;
+    background-image: url(images/grain.webp);
+    margin-bottom: 2.5%;
+}
+
+
+select option {
+
+    background-color: #000000;
+    
+}
+
 #enviarform {
 
     font-family: 'Modum', sans-serif;

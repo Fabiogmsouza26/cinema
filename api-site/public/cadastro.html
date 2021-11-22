@@ -54,9 +54,13 @@
                 style="color:whitesmoke; display:none; font-family: 'Aspergit Bold', sans-serif; font-size:16px; margin-right: 26.5%">
                 Confirmação válida!<br><br></div>
             <div class='text-form'>INFORME TRÊS FILMES QUE MARCARAM SUA VIDA</div>
-            <input name="filme1" placeholder='Primeiro filme'>
-            <input name="filme2" placeholder='Segundo filme'>
-            <input name="filme3" placeholder='Terceiro filme'>
+            <select id="filme" name="filme">
+                <option>Cidadão Kane - 1941</option>
+                <option>Casablanca - 1942</option>
+                <option>Crepúsculo dos Deuses - 1950</option>
+                <option>O Sétimo Selo - 1957</option>
+                <option>Os Incompreendidos - 1959</option>
+            </select>
             <br><br>
             <button class="btn">Cadastrar</button>
         </form>
@@ -109,6 +113,8 @@
         var email = formulario.get("email");
         var senha = formulario.get("senha");
         var confirmacaoSenha = formulario.get("confirmacao-senha");
+        var filme = formulario.get("filme");
+
 
         emailAddress = email_input.value;
 
@@ -171,6 +177,7 @@
         });
 
         return false;
+
     }
 
     function validacoes() {
@@ -220,6 +227,5 @@
 
         }
     }
-
 
 </script>

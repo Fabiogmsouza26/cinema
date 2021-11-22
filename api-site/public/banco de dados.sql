@@ -1,21 +1,25 @@
-CREATE DATABASE cinehall;
+CREATE DATABASE frameans;
 
-USE cinehall;
+USE frameans;
 
 CREATE TABLE usuario (
-
-idUsuario INT PRIMARY KEY,
-Nome VARCHAR(150),
-dataNasc DATE,
-email VARCHAR(100),
-whatsapp VARCHAR(14)
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(50),
+	email VARCHAR(50),
+	senha VARCHAR(50)
 );
 
 CREATE TABLE filmes (
-Filme1 VARCHAR(100),
-Filme2 VARCHAR(100),
-Filme3 VARCHAR(100),
-fk_usuarios INT,
-FOREIGN KEY (fk_usuarios) REFERENCES usuario(idUsuario)
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	filme VARCHAR(150),
+    fk_usuario INT,
+    FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
+CREATE TABLE medida (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	temperatura DECIMAL,
+	umidade DECIMAL,
+	momento DATETIME,
+	fk_aquario INT
+);
