@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div_imagens"></div>
+  <div id="div_votacao"></div>
+
+  <img id="romance" onclick="votar(1)" height="200px"
+    src="https://midias.correiobraziliense.com.br/_midias/jpg/2021/10/29/675x450/1_anabelle-6978355.jpg">
+  <img id="western" onclick="votar(2)" height="200px"
+    src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/08/AAAABcoqzmgKWOlFDAQCoNME-sapHMMTDMqGEKyPxMkL3bjgzhpgtpUArMHqV7YathdIE83_BNji7IoXnAF2AkSbd5XfFdwr.jpg">
+
+  <div id="div_votacao" style="display:none"><span id="conte1">0</span></div>
+
+</body>
+
+</html>
+
+<script>
+
+function votar(idGenero) {
+
+console.log(idGenero)
+
+fetch("/genero/votar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idGenero: idGenero,
+            })
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+        })
+        .catch(function (resposta) {});
+    
+        romance.onclick = '';
+        western.onclick = '';
+
+
+}
+
+</script>

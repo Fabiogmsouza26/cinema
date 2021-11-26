@@ -1,25 +1,52 @@
+
 CREATE DATABASE frameans;
 
 USE frameans;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+	nome VARCHAR(150),
+	email VARCHAR(100),
+	senha VARCHAR(50),
+	filme VARCHAR(150)
 );
 
-CREATE TABLE filmes (
+CREATE TABLE generos (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	filme VARCHAR(150),
-    fk_usuario INT,
-    FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+	genero VARCHAR(100),
+    curtidas INT
+); 
+
+
+CREATE TABLE UsuarioGeneros (
+fkusuario INT,
+FOREIGN KEY (fkusuario) REFERENCES usuario(id),
+fkgeneros INT,
+FOREIGN KEY (fkgeneros) REFERENCES generos(id),
+PRIMARY KEY(fkgeneros, fkusuario)
 );
 
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
-);
+select * from usuario;
+
+select * from generos;
+
+insert into generos (genero) values
+('western'),
+('drama');
+
+select * from generos;
+
+select * from usuario;
+
+
+
+
+
+
+
+
+
+
+
+
+
