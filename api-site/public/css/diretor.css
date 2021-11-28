@@ -67,104 +67,14 @@ li:hover {
 
 main {
     width: 75vw;
-    height: 375vh;
+    height: 145vh;
     margin: auto;
     border: 3px solid #E3D181;
     border-bottom: 0px;
     border-top: 1px solid transparent;
     background: linear-gradient(90deg, #dcdcdce8,#e4e4e4, #e6e6e6f8, #ffffff, #ffffff, #ffffff);  
     box-shadow:-1px 1px 150px 2px #E3D181;
-    overflow:hidden;
-
-}
-
-
-
-#film1 {
-
-    top:50.5%;
-    left: -5%;
-    height: 13%;
-    width: 80vw;
-    box-shadow:-1px 1px 5px 3px black;
-    position: relative;
-    z-index: 2;
-
-}
-
-#cinema-text2 {
-    width: 75vw;
-    height: 85vh;
-    margin: auto;
-    margin-top: -7.7%;
-
-    font-family: 'Aspergit Bold', sans-serif;
-    font-size: 18px;
-    line-height: 0.8cm;
-
-    color:whitesmoke;
-    background-color:black;
-    border: 3px solid #E3D181;
-    border-top: 0px transparent;
-    box-shadow:-1px 1px 150px 2px #E3D181;
-    background: linear-gradient(180deg, #000000,#212121,#3f3f3fe7, #4d4d4de5, #767676dc);  
-    position: relative;
-    z-index: 1;
-
-}
-
-#cinema-text2-p {
-    float:left;
-    margin-left: 3%;
-    margin-right: 10%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:left;
-    font-weight:bold;
-}
-
-
-#cinema-text2-photos {
-    float: left;
-    padding-top: 11%;
-    width: 25%;
-    text-align:center;
-
-}
-
-
-#photo1 {
-margin-top: -1%;
-border: 6px solid whitesmoke;
-box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-transform: rotate(5deg);
-}
-
-
-#photo2 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(-5deg);
-}
-
-
-#photo3 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(5deg);
-}
-
-
-
-#cinema-text2-p2 {
-    margin-right: 3%;
-    margin-left: 3%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:right;
-    float:right;
+  
 
 }
 
