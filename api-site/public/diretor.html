@@ -9,7 +9,7 @@
     <title>Atriumz | Sobre</title>
 
     <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="stylesheet" href="./css/diretor.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -18,11 +18,18 @@
     <style>
         #popcorn {
 
-            background-image: url(css/images/popcornbag3.png);
-            height: 358px;
-            width: 226px;
-            margin-left: 10%;
+            background-image: url(css/images/popcornbag4.png);
+            height: 53vh;
+            width: 17vw;
+            margin-left: 15%;
             margin-top: 10%;
+        }
+
+        .text-description {
+
+            font-size: 22px;
+            margin-right: 5%;
+            line-height: 1.0cm;
         }
 
         #descricao {
@@ -37,10 +44,12 @@
         #dropzone {
             width: 320px;
             height: 200px;
+            margin-right: 5%;
+            margin-top: 7%;
             margin-bottom: 10px;
             padding: 10px;
             float: right;
-            background: url(fora-do-ar.gif);
+            background: url(css/images/fora-do-ar.gif);
             border: 10px solid black;
         }
 
@@ -53,40 +62,91 @@
 
 
         #popcorn_sadness {
-            margin-left: 190px;
-            margin-top: 5px;
+            margin-left: 7.5%;
+            margin-top: 3.5%;
             position: absolute;
-            height: 90px;
-            width: 101px;
+            height: 10%;
+            width: 6%;
         }
 
         #popcorn_love {
 
-            margin-left: 25px;
-            margin-top: 47px;
+            margin-left: 2%;
+            margin-top: 1.6%;
             position: absolute;
-            width: 62px;
-            height: 67px;
+            width: 3%;
+            height: 7%;
         }
 
 
         #popcorn_happiness {
 
-            margin-left: 90px;
-            margin-top: -20px;
+            margin-left: 5%;
+            margin-top: -2%;
             position: absolute;
-            height: 140px;
-            width: 140px;
+            height: 10%;
+            width: 4.5%;
 
         }
 
         #popcorn_fury {
 
-            margin-left: 210px;
-            margin-top: 15px;
+            margin-left: 10%;
+            margin-top: -4%;
             position: absolute;
-            height: 82px;
-            width: 100px;
+            height: 7.5%;
+            width: 4.5%;
+        }
+
+        #popcorn_fear {
+
+            margin-left: 13.5%;
+            margin-top: -2%;
+            position: absolute;
+            height: 7%;
+            width: 3.5%;
+        }
+
+        #essencia_diretor {
+
+            width: 100%;
+            margin-top: 50%;
+            height: 600px;
+
+        }
+
+        h2 {
+
+            background-color: black;
+            color: gold;
+            font-family: 'Aspergit Bold', sans-serif;
+            line-height: 350%;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding-left: 3%;
+            border-radius: 20px;
+
+        }
+
+        .imagem_diretor {
+
+            margin-left: 6%;
+            margin-right: 3%;
+            margin-top: 2%;
+            float: left;
+            border: 7px solid black;
+
+        }
+
+        .texto_diretor {
+
+            margin-right: 5.5%;
+            margin-top: 4%;
+            text-align: justify;
+            font-family: 'Aspergit Bold', sans-serif;
+            line-height: 160%;
+            font-size: 20px;
+
         }
     </style>
 
@@ -108,11 +168,12 @@
             <div id="descricao">
                 <h3>PIPOCAS MÁGICAS</h3>
                 <p class="text-description">
-                    Abaixo se encontra o balde dos sentimentos,
-                    uma antiga relíquia que nem mesmo Indiana Jones foi capaz de encontrar.
-                    Você deve arrastar uma pipoca mágica do balde para a tela
-                com o intuito de materializar tal pipoca em um sentimento. E então,
-                você descobrirá que diretor é!
+                    Parabéns! Você achou o balde dos sentimentos,
+                    antiga relíquia que nem mesmo Indiana Jones foi capaz de encontrar.<br><br>
+                    Você deve arrastar para a tela uma pipoca mágica do balde, cuja cor
+                    você mais se identifica, com o intuito de materializar tal pipoca
+                    em um sentimento. Então, você descobrirá a essência de qual diretor
+                    reside dentro de você!
 
                 </p>
             </div>
@@ -129,7 +190,26 @@
 
                     <img id="popcorn_fury" src="css/images/popcorn-fury-teste2.png" draggable="true"
                         ondragstart="drag(event)" ondragend="soltar4(event)"><br>
+
+                    <img id="popcorn_fear" src="css/images/popcorn-fear.png" draggable="true" ondragstart="drag(event)"
+                        ondragend="soltar5(event)"><br>
                 </div>
+        </section>
+
+        <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <section id="essencia_diretor">
+            <div id="tarantino" style="display:none">
+                <h2>VOCÊ É QUENTIN TARANTINO!</h2>
+                <img class="imagem_diretor" src="css/images/tarantino.jpg">
+                <p class="texto_diretor"> É fácil identificar um filme de Tarantino quando o assunto é violência!
+                    Com uma direção nervosa e repleta de outras influências cinematográficas,
+                    o diretor dá um banho de sangue quando o assunto é cinema.</p>
+                    <p class="texto_diretor">Quentin Tarantino dirigiu os filmes consagrados <i>Cães de Aluguel</i>,
+                        <i>Bastardos Inglórios</i>, <i>Django Livre</i> e <i>Kill Bill</i>, assim sendo um
+                        dos nomes mais aclamados de Hollywood. </p>
+            </div>
+
         </section>
 
         <img id='film1' src='css/images/film-filmstrip.gif'>
@@ -165,80 +245,36 @@
 </html>
 
 <script>
-    function next() {
 
-        var text = text_cinema.innerHTML;
+    function allowDrop(event) {
 
-        if (text.indexOf("Me lembro") > -1) {
+        event.preventDefault();
+    }
 
-            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>A Nouvelle Vague foi marcante quando ingressei na
-        faculdade de Publicidade. A revolução na forma de fazer cinema por meio de abordagens
-        cotidianas e quebra da linearidade narrativa mostra inovação.</span>
-        <br><br>
-        <div id='texts_subtitles' style='animation: fadeIn 5s;'>
-        <img class='image_text' src='css/images/hiroshima-mon-amour.gif'>
-        <div class='image_subtitle'><i>Hiroshima mon amour</i></div>
-        </div>
-        `
+    function drag(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+    }
 
-            botao1.style.visibility = 'visible';
+    function soltar1(event) {
 
-        }
+        dropzone.style.background = 'url(css/images/ingloriousbastards.gif)';
+        popcorn_sadness.style.display = 'none';
+        tarantino.style.display = 'block';
 
-        else if (text.indexOf("A Nouvelle Vague foi marcante") > -1) {
+    }
 
-            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>O Expressionismo Alemão foi outro movimento 
-            artístico marcante para mim. O uso acentuado de maquiagem, formas abstratas 
-            e distorcidas para externalizar sonhos e sentimentos denotam clara
-            autenticidade na forma de enxergar a vida.</span><br><br>
-            <div id='texts_subtitles' style='animation: fadeIn 5s;'>
-            <img class='image_text' src='css/images/nosferatu.gif'>
-            <i span class='image_subtitle'>Nosferatu</i>
-            </div>
-            `
-            botao2.style.display = 'none';
+    function soltar2(event) {
 
-        }
+        dropzone.style.background = 'url(css/images/tyrone-dorothy.gif)';
+        popcorn_love.style.display = 'none';
+
     }
 
 
-    function previous() {
-
-        var text = text_cinema.innerHTML;
-
-        if (text.indexOf("A Nouvelle Vague foi marcante") > -1) {
-
-            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>Me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
-                Eu descobri depois que tudo começou com os irmãos Lumière, em 1985,
-                graças ao cinematógrafo. Arte e ciência são a combinação perfeita para explorar a
-                <b>criatividade</b>.</span>
-                <br><br>
-                <div id='texts_subtitles' style='animation: fadeIn 5s;'>
-                <img class='image_text' src='css/images/trainciotat.gif'>
-                <div class='image_subtitle'><i>L'Arrivée d'un train à La Ciotat</i></div>
-                </div></span>
-                
-        `
-            botao1.style.visibility = 'hidden';
-            botao2.style.display = 'block';
-
-        }
-
-        if (text.indexOf("Expressionismo Alemão") > -1) {
-
-            text_cinema.innerHTML = `<span style='animation: fadeIn 5s;'>A Nouvelle Vague foi marcante quando ingressei na
-        faculdade de Publicidade. A revolução na forma de fazer cinema por meio de abordagens
-        cotidianas e quebra da linearidade narrativa mostra inovação.</span>
-        <br><br>
-        <div id='texts_subtitles' style='animation: fadeIn 5s;'>
-        <img class='image_text' src='css/images/hiroshima-mon-amour.gif'>
-        <div class='image_subtitle'><i>Hiroshima mon amour</i></div>
-        </div>
-        `
-            botao2.style.display = 'block';
-
-        }
-
+    function drop(event) {
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        event.preventDefault();
 
     }
 
