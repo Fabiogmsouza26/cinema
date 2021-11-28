@@ -49,8 +49,18 @@
             margin-bottom: 10px;
             padding: 10px;
             float: right;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             background: url(css/images/fora-do-ar.gif);
             border: 10px solid black;
+            font-family: 'Modum', sans-serif;
+            font-size: 50px;
+            color: white;
+            text-shadow: 1px 1px 4px black, 0 0 1em black, 0 0 0.2em black;
+
         }
 
 
@@ -252,8 +262,8 @@
                     dos femininos, o que exalta as dores e turbulências dos personagens.
                 </p>
                 <p class="texto_diretor">Bergman dirigiu os aclamados <i>Persona</i>,
-                    <i>Mônica e o Desejo</i>, <i>Morangos Silvestres</i> e <i>O Sétimo Selo</i>.
-                    O cineasta dirigiu mais de 60 filmes!
+                    <i>Mônica e o Desejo</i>, <i>Morangos Silvestres</i>, <i>O Sétimo Selo</i>
+                    e muito mais. O cineasta dirigiu mais de 60 filmes!
                 </p>
                 <br><br><br><br><br>
             </div>
@@ -279,6 +289,7 @@
 
     function soltar1(event) {
 
+
         dropzone.style.background = 'url(css/images/persona.gif)';
         popcorn_sadness.style.display = 'none';
 
@@ -287,6 +298,7 @@
         mellbrooks.style.display = 'none';
         ingmarbergman.style.display = 'block';
 
+        dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Tristeza</span>`;
 
     }
 
@@ -299,6 +311,8 @@
         tarantino.style.display = 'none';
         ingmarbergman.style.display = 'none';
         woodyallen.style.display = 'block';
+
+        dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Amor</span>`;
 
     }
 
@@ -313,6 +327,8 @@
         ingmarbergman.style.display = 'none';
         mellbrooks.style.display = 'block';
 
+        dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Felicidade</span>`;
+
     }
 
     function soltar4(event) {
@@ -324,6 +340,8 @@
         woodyallen.style.display = 'none';
         ingmarbergman.style.display = 'none';
         tarantino.style.display = 'block';
+
+        dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Fúria</span>`;
 
     }
 
