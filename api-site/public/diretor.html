@@ -138,7 +138,7 @@
             margin-left: 5.5%;
             margin-right: 4%;
             margin-top: 2%;
-            margin-bottom:4.5%;
+            margin-bottom: 4.5%;
             float: left;
             border: 7px solid black;
 
@@ -204,7 +204,7 @@
         <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
         <section id="essencia_diretor">
-            <div id="tarantino" style="display:none">
+            <div id="tarantino" style="display:none; animation: fadeIn 5s">
                 <h2>VOCÊ É QUENTIN TARANTINO!</h2>
                 <img class="imagem_diretor" src="css/images/tarantino.jpg">
                 <p class="texto_diretor"> É fácil identificar um filme de Tarantino quando o assunto é violência!
@@ -216,7 +216,47 @@
                 </p>
                 <br><br><br><br><br>
             </div>
-
+            <div id="woodyallen" style="display:none; animation: fadeIn 5s">
+                <h2>VOCÊ É WOODY ALLEN!</h2>
+                <img class="imagem_diretor" src="css/images/woodyallen.jpg">
+                <p class="texto_diretor">Em matéria de amor, Woody Allen é um diretor
+                    que sabe se debruçar com maestria. Capaz de demonstrar sua personalidade
+                    por meio de histórias que simulam o diálogo entre os casais e momentos
+                    bem-humorados, o artista nos cativa por meio de profundidade e leveza.</p>
+                <p class="texto_diretor">Allen dirigiu os consagrados <i>Manhattan</i>,
+                    <i>Annie Hall</i>, <i>Ponto Final</i> e <i>Meia-Noite em Paris</i>.
+                    Além de diretor, é ator, escritor e músico.
+                </p>
+                <br><br><br><br><br>
+            </div>
+            <div id="mellbrooks" style="display:none; animation: fadeIn 5s">
+                <h2>VOCÊ É MELL BROOKS!</h2>
+                <img class="imagem_diretor" src="css/images/mellbrooks.jpg">
+                <p class="texto_diretor">Mell Brooks é um excêntrico cineasta cujas
+                    paródias estão entre as mais aclamadas comédias. É um dos
+                    diretores mais bem sucedidos da década de 70, deixando sua marca da
+                    felicidade na história do cinema.
+                </p>
+                <p class="texto_diretor">Mell Brooks dirigiu os longas consagrados <i>O Jovem Frankenstein</i>,
+                    <i>Banzé no Oeste</i>, <i>A Última Loucura de Mell Brooks</i> e <i>The Producers</i>.
+                    Ele é um ícone da comédia non-sense e acumulou diversas premiações durante sua carreira.
+                </p>
+                <br><br><br><br><br>
+            </div>
+            <div id="ingmarbergman" style="display:none; animation: fadeIn 5s">
+                <h2>VOCÊ É INGMAR BERGMAN!</h2>
+                <img class="imagem_diretor" src="css/images/ingmarbergman.jpg">
+                <p class="texto_diretor">Ingmar Bergman se destaca pelo peso dramático
+                    em seus longas permeados por conflitos políticos, sociais e pessoais.
+                    Seu acervo fílmico capta as nuances do rosto humano, principalmente
+                    dos femininos, o que exalta as dores e turbulências dos personagens.
+                </p>
+                <p class="texto_diretor">Bergman dirigiu os aclamados <i>Persona</i>,
+                    <i>Mônica e o Desejo</i>, <i>Morangos Silvestres</i> e <i>O Sétimo Selo</i>.
+                    O cineasta dirigiu mais de 60 filmes!
+                </p>
+                <br><br><br><br><br>
+            </div>
         </section>
 
     </main>
@@ -239,19 +279,53 @@
 
     function soltar1(event) {
 
-        dropzone.style.background = 'url(css/images/ingloriousbastards.gif)';
+        dropzone.style.background = 'url(css/images/persona.gif)';
         popcorn_sadness.style.display = 'none';
-        tarantino.style.display = 'block';
+
+        tarantino.style.display = 'none';
+        woodyallen.style.display = 'none';
+        mellbrooks.style.display = 'none';
+        ingmarbergman.style.display = 'block';
+
 
     }
 
     function soltar2(event) {
 
-        dropzone.style.background = 'url(css/images/tyrone-dorothy.gif)';
+        dropzone.style.background = 'url(css/images/matchpoint.gif)';
         popcorn_love.style.display = 'none';
+
+        mellbrooks.style.display = 'none';
+        tarantino.style.display = 'none';
+        ingmarbergman.style.display = 'none';
+        woodyallen.style.display = 'block';
 
     }
 
+
+    function soltar3(event) {
+
+        dropzone.style.background = 'url(css/images/theproducers.gif)';
+        popcorn_happiness.style.display = 'none';
+
+        tarantino.style.display = 'none';
+        woodyallen.style.display = 'none';
+        ingmarbergman.style.display = 'none';
+        mellbrooks.style.display = 'block';
+
+    }
+
+    function soltar4(event) {
+
+        dropzone.style.background = 'url(css/images/ingloriousbastards.gif)';
+        popcorn_fury.style.display = 'none';
+
+        mellbrooks.style.display = 'none';
+        woodyallen.style.display = 'none';
+        ingmarbergman.style.display = 'none';
+        tarantino.style.display = 'block';
+
+    }
 
     function drop(event) {
         var data = event.dataTransfer.getData("Text");
