@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dropzone {
+            width: 320px;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+            float: right;
+            background: url(fora-do-ar.gif);
+            border: 10px solid black;
+        }
+
+
+        #coluna1 {
+            width: '50%';
+            float: left;
+
+        }
+
+
+        #popcorn_sadness {
+            margin-left: 190px;
+            margin-top: 5px;
+            position: absolute;
+            height: 90px;
+            width: 101px;
+        }
+
+        #popcorn_love {
+
+            margin-left: 25px;
+            margin-top: 47px;
+            position: absolute;
+            width: 62px;
+            height: 67px;
+        }
+
+
+        #popcorn_happiness {
+
+            margin-left: 90px;
+            margin-top: -20px;
+            position: absolute;
+            height: 140px;
+            width: 140px;
+
+        }
+
+        #popcorn_fury {
+
+            margin-left: 210px;
+            margin-top: 15px;
+            position: absolute;
+            height: 82px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='coluna1'>
+        <div style='background-image: url(popcorn_bag.png); height:480px; width:325px'>
+            <img id="popcorn_sadness" src="popcorn-sadness-teste.png" draggable="true" ondragstart="drag(event)"
+                ondragend="soltar1(event)"><br>
+
+            <img id="popcorn_love" src="popcorn-love-teste2.png" draggable="true" ondragstart="drag(event)"
+                ondragend="soltar2(event)"><br>
+
+            <img id="popcorn_happiness" src="popcorn-happiness-teste2.png" draggable="true" ondragstart="drag(event)"
+                ondragend="soltar3(event)"><br>
+
+            <img id="popcorn_fury" src="popcorn-fury-teste2.png" draggable="true" ondragstart="drag(event)"
+                ondragend="soltar4(event)"><br>
+        </div>
+    </div>
+
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    </div>
+
+    <br><br>
+
+</body>
+
+</html>
+
+<script>
+
+    function allowDrop(event) {
+
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+    }
+
+    function soltar1(event) {
+
+        dropzone.style.background = 'url(tyrone-dorothy.gif)';
+        popcorn_love.style.display = 'none';
+
+    }
+
+    function soltar2(event) {
+
+        dropzone.style.background = 'url(ingloriousbastards.gif)';
+        popcorn_sadness.style.display = 'none';
+    }
+
+
+    function drop(event) {
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        event.preventDefault();
+
+    }
+
+
+</script>

@@ -8,7 +8,32 @@
 
     <title>Atriumz | Sobre</title>
 
+    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <style>
+        #popcorn {
+
+            background-image: url(css/images/popcornbag3.png);
+            height: 358px;
+            width: 226px;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        #descricao {
+
+            margin-left: 5%;
+            margin-top: 5%;
+            font-family: 'Aspergit Bold', sans-serif;
+            color: black;
+            font-size: 28px;
+        }
+
         #dropzone {
             width: 320px;
             height: 200px;
@@ -65,13 +90,6 @@
         }
     </style>
 
-
-    <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/sobre.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -87,22 +105,31 @@
 
     <main>
         <section id='content-sobre'>
-            <div id='text_cinema'>
-                Me lembro dos meus primeiros contatos com cinema. Era a época do VHS!
-                Eu descobri depois que tudo começou com os irmãos Lumière, em 1985,
-                graças ao cinematógrafo. Arte e ciência são a combinação perfeita para explorar a
-                <b>criatividade</b>.
-                <br><br>
-                <div id='texts_subtitles'>
-                    <img class='image_text' src='css/images/trainciotat.gif'>
-                    <div class='image_subtitle'><i>L'Arrivée d'un train à La Ciotat</i></div>
+            <div id="descricao">
+                <h3>PIPOCAS MÁGICAS</h3>
+                <p class="text-description">
+                    Abaixo se encontra o balde dos sentimentos,
+                    uma antiga relíquia que nem mesmo Indiana Jones foi capaz de encontrar.
+                    Você deve arrastar uma pipoca mágica do balde para a tela
+                com o intuito de materializar tal pipoca em um sentimento. E então,
+                você descobrirá que diretor é!
+
+                </p>
+            </div>
+            <div id='coluna1'>
+                <div id="popcorn">
+                    <img id="popcorn_sadness" src="css/images/popcorn-sadness-teste.png" draggable="true"
+                        ondragstart="drag(event)" ondragend="soltar1(event)"><br>
+
+                    <img id="popcorn_love" src="css/images/popcorn-love-teste2.png" draggable="true"
+                        ondragstart="drag(event)" ondragend="soltar2(event)"><br>
+
+                    <img id="popcorn_happiness" src="css/images/popcorn-happiness-teste2.png" draggable="true"
+                        ondragstart="drag(event)" ondragend="soltar3(event)"><br>
+
+                    <img id="popcorn_fury" src="css/images/popcorn-fury-teste2.png" draggable="true"
+                        ondragstart="drag(event)" ondragend="soltar4(event)"><br>
                 </div>
-            </div>
-            <div id='buttons'>
-                <button id='botao1' onclick='previous()'>RETORNAR</button>
-                <button id='botao2' onclick='next()'>CONTINUAR</button>
-            </div>
-            <img id='chaplin-curious' src='css/images/chaplin-curious.gif'>
         </section>
 
         <img id='film1' src='css/images/film-filmstrip.gif'>

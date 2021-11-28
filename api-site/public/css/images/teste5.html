@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #br {
+
+            height: 60px;
+            width: 100px;
+            background-color: red;
+        }
+
+        #eua {
+
+            height: 60px;
+            width: 100px;
+            background-color: salmon;
+        }
+
+        #arraste {
+
+            height: 120px;
+            width: 200px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+<div id="coluna" style="float:left">
+        <div id="br" draggable="true">Brasil</div>
+        <div id="eua" draggable="true">Estados Unidos</div>
+</div>
+        <div id="arraste" style="float:right" draggable="true"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    const paises = document.querySelectorAll("[draggable='true']")
+const containerSoltar = document.querySelector(".container-soltar")
+
+function comecarArrastar() {
+
+this.classList.add("arrastando");
+}
+
+    paises.forEach((palavra) =>{
+
+        palavra.addEventListener("dragstart", comecarArrastar)
+    })
+
+   containerSoltar.addEventListener("dragover", entrouSoltar)
+</script>
