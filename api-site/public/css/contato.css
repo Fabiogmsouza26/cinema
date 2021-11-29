@@ -74,6 +74,7 @@ main {
     font-size: 30px;
     color: #E3D181;
     margin-bottom: 2.5%;
+    margin-top: 5%;
 
 }
 
@@ -121,16 +122,27 @@ select option {
     
 }
 
-#enviarform {
 
-    font-family: 'Modum', sans-serif;
-    width: 15%;
-    line-height: 1cm;
-    font-size: 30px;
+.btn {
+
     color: whitesmoke;
-    border: 3px solid #E3D181;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background-color: black;
+    background: linear-gradient(45deg, #ac9b40, #9e8d2c, #8f7e22, #756715, #5e5107);
+    width: 20%;
+    font-size: 30px;
+    font-family: 'Modum', sans-serif;
+    height: 9vh;
+    margin-top: 2%;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+
+    color: #E3D181;
+    background: url(images/grain.webp);
+    border: 3px solid #E3D181;
 
 }
 
