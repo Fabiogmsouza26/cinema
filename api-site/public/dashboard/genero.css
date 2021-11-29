@@ -63,33 +63,59 @@ li:hover {
 
 }
 
+#principal {
+
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+.filmstrip {
+
+  height: 200px;
+  width:7.1vw;
+  background-image: url(filmstrip.gif);
+
+
+}
+
+.filmstrip2 {
+
+  height: 900px;
+  width:7.1vw;
+  margin-left:auto;
+  background-image: url(filmstrip.gif);
+  opacity:0.8;
+
+
+}
+
 main {
-    width: 75vw;
+    width: 90vw;
     height: 145vh;
     margin: auto;
+    background-color: rgb(255, 255, 255, 0);    
     border: 3px solid #E3D181;
-    border-bottom: 0px;
-    border-top: 1px solid transparent;
-    background: linear-gradient(90deg, #dcdcdce8,#e4e4e4, #e6e6e6f8, #ffffff, #ffffff, #ffffff);  
+    border-top:0px;
+
     box-shadow:-1px 1px 150px 2px #E3D181;
     overflow:hidden;
+    display:flex;
+    flex-direction:row;
+
 
 }
 
 
-.video-container {
-  height: 600px;
-  width: 1030px;
-  margin-top:-50px;
-  position: relative;
-}
 
 .video-container video {
-width: 100%;
+width: 82%;
 height: 100%;
+margin-top:-2%;
 position: absolute;
 object-fit: cover;
-z-index: 0;
+z-index: -1;
+
 }
 
 #content-sobre {
