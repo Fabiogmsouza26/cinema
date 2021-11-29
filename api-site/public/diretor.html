@@ -25,6 +25,46 @@
             margin-top: 10%;
         }
 
+        #zona_materializacao {
+
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            margin-right: 3.5%;
+            margin-top: 7%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #dropzone {
+            width: 320px;
+            height: 200px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: url(css/images/fora-do-ar.gif);
+            border: 10px solid black;
+            font-family: 'Modum', sans-serif;
+            font-size: 50px;
+            color: white;
+            text-shadow: 1px 1px 4px black, 0 0 1em black, 0 0 0.2em black;
+
+        }
+
+        #legenda {
+
+            text-align: center;
+            margin-top: 2%;
+            font-family: 'Aspergit Bold', sans-serif;
+            font-size: 17px;
+            font-style: italic;
+        }
+
         .text-description {
 
             font-size: 22px;
@@ -39,28 +79,6 @@
             font-family: 'Aspergit Bold', sans-serif;
             color: black;
             font-size: 28px;
-        }
-
-        #dropzone {
-            width: 320px;
-            height: 200px;
-            margin-right: 5%;
-            margin-top: 7%;
-            margin-bottom: 10px;
-            padding: 10px;
-            float: right;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: url(css/images/fora-do-ar.gif);
-            border: 10px solid black;
-            font-family: 'Modum', sans-serif;
-            font-size: 50px;
-            color: white;
-            text-shadow: 1px 1px 4px black, 0 0 1em black, 0 0 0.2em black;
-
         }
 
 
@@ -211,7 +229,10 @@
                 </div>
         </section>
 
-        <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <section id="zona_materializacao">
+            <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="legenda"></div>
+        </section>
 
         <section id="essencia_diretor">
             <div id="tarantino" style="display:none; animation: fadeIn 5s">
@@ -267,6 +288,21 @@
                 </p>
                 <br><br><br><br><br>
             </div>
+            <div id="hitchcock" style="display:none; animation: fadeIn 5s">
+                <h2>VOCÊ É ALFRED HITCHCOCK!</h2>
+                <img class="imagem_diretor" src="css/images/hitchcock.jpg">
+                <p class="texto_diretor">Hitchcock é um dos diretores do terror
+                    e suspense mais bem conceituados de toda a história. Sua especialidade
+                    é o terror psicológico, pois vale-se de imagens que reforçam a
+                    ansiedade e o medo.
+                </p>
+                <p class="texto_diretor">Alfred Hitchcock dirigiu os lendários <i>Psicose</i>,
+                    <i>Janela Indiscreta</i>, <i>Um Corpo que Cai</i> e <i>Pacto Sinistro</i>.
+                    O trabalho horripilante e criativo do artista influenciou muitos diretores 
+                    renomados e de variadas expertises ao longo da história.
+                </p>
+                <br><br><br><br><br>
+            </div>
         </section>
 
     </main>
@@ -293,12 +329,14 @@
         dropzone.style.background = 'url(css/images/persona.gif)';
         popcorn_sadness.style.display = 'none';
 
+        hitchcock.style.display = 'none';
         tarantino.style.display = 'none';
         woodyallen.style.display = 'none';
         mellbrooks.style.display = 'none';
         ingmarbergman.style.display = 'block';
 
         dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Tristeza</span>`;
+        legenda.innerHTML = `<span style='animation: fadeIn 5s;'>Persona - Ingmar Bergman - 1966</span>`;
 
     }
 
@@ -307,12 +345,14 @@
         dropzone.style.background = 'url(css/images/matchpoint.gif)';
         popcorn_love.style.display = 'none';
 
+        hitchcock.style.display = 'none';
         mellbrooks.style.display = 'none';
         tarantino.style.display = 'none';
         ingmarbergman.style.display = 'none';
         woodyallen.style.display = 'block';
 
         dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Amor</span>`;
+        legenda.innerHTML = `<span style='animation: fadeIn 5s;'>Ponto Final - Woody Allen - 2005</span>`;
 
     }
 
@@ -322,12 +362,15 @@
         dropzone.style.background = 'url(css/images/theproducers.gif)';
         popcorn_happiness.style.display = 'none';
 
+        hitchcock.style.display = 'none';
         tarantino.style.display = 'none';
         woodyallen.style.display = 'none';
         ingmarbergman.style.display = 'none';
         mellbrooks.style.display = 'block';
 
         dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Felicidade</span>`;
+        legenda.innerHTML = `<span style='animation: fadeIn 5s;'>The Producers - Mell Brooks - 1967</span>`;
+
 
     }
 
@@ -336,14 +379,35 @@
         dropzone.style.background = 'url(css/images/ingloriousbastards.gif)';
         popcorn_fury.style.display = 'none';
 
+        hitchcock.style.display = 'none';
         mellbrooks.style.display = 'none';
         woodyallen.style.display = 'none';
         ingmarbergman.style.display = 'none';
         tarantino.style.display = 'block';
 
         dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Fúria</span>`;
+        legenda.innerHTML = `<span style='animation: fadeIn 5s;'>Bastardos Inglórios - Tarantino - 2009</span>`;
+
 
     }
+
+    function soltar5(event) {
+
+        dropzone.style.background = 'url(css/images/vertigo.gif)';
+        popcorn_fear.style.display = 'none';
+
+        mellbrooks.style.display = 'none';
+        woodyallen.style.display = 'none';
+        ingmarbergman.style.display = 'none';
+        tarantino.style.display = 'none';
+        hitchcock.style.display = 'block';
+
+        dropzone.innerHTML = `<span style='animation: fadeIn 7s;'>Agonia</span>`;
+        legenda.innerHTML = `<span style='animation: fadeIn 5s;'>Um Corpo que Cai - Hitchcock - 1958</span>`;
+
+
+    }
+
 
     function drop(event) {
         var data = event.dataTransfer.getData("Text");
