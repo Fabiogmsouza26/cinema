@@ -16,18 +16,18 @@ CREATE TABLE generos (
 ); 
 
 
-CREATE TABLE usuario_generos (
+CREATE TABLE UsuarioGeneros (
 fkusuario INT,
 FOREIGN KEY (fkusuario) REFERENCES usuario(id),
 fkgeneros INT,
-FOREIGN KEY (fkgeneros) REFERENCES generos(idGenero),
+FOREIGN KEY (fkgeneros) REFERENCES generos(id),
 PRIMARY KEY(fkgeneros, fkusuario)
 );
 
-create table selecao_generos(
+create table curtida(
 id int primary key auto_increment,
 fkGenero int,
-foreign key(fkGenero) references generos(idGenero)
+foreign key(fkGenero) references generos(id)
 );
 
 insert into generos (genero) values
@@ -37,6 +37,16 @@ insert into generos (genero) values
 ('Drama'),
 ('Ação');
 
-select genero as 'Gêneros', count(fkGenero) as 'Número de seleções' from generos 
-join selecao_generos where idGenero = fkGenero group by idGenero;
+
+select g.genero, count(c.fkGenero) as curtidas from generos as g inner join curtida as c where g.id = c.fkGenero group by g.id;
+
+select * from curtida;
+select count(fkGenero) as curtidas, fkGenero from curtida where fkGenero = 1;
+
+select * from generos;
+
+insert into generos (genero) values
+('western'),
+('drama');
+
 
