@@ -24,24 +24,30 @@
     </ul>
   </header>
 
-    <main>
-      <div class="filmstrip"></div>
-      <div class="video-container">
-        <video autoplay muted loop>
-          <source src="videoplayback.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="text_inside">BEM-VINDO! TER VOCÊ É UMA FESTA SEM FIM!</div>
-      <div class="genres">ESCOLHA SEU GÊNERO FAVORITO
+  <main>
+    <div class="filmstrip"></div>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="videoplayback.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div id="text_inside">BEM-VINDO! TER VOCÊ É UMA FESTA SEM FIM!</div>
 
-        <img id="romance" onclick="votar(1)" height="100px" style="margin-top:-50px; display:block"
-        src="https://midias.correiobraziliense.com.br/_midias/jpg/2021/10/29/675x450/1_anabelle-6978355.jpg">
-      <img id="western" onclick="votar(2)" height="100px" style="margin-top:-50px; display:block"
-        src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/08/AAAABcoqzmgKWOlFDAQCoNME-sapHMMTDMqGEKyPxMkL3bjgzhpgtpUArMHqV7YathdIE83_BNji7IoXnAF2AkSbd5XfFdwr.jpg">
-      </div>
-      <div class="filmstrip2"></div>
+    <div id="genres">ESCOLHA SEU GÊNERO FAVORITO<br><br>
 
-      </main>
+      <div id="moviegenres">
+        <button id="romance" onclick="votar(1)">ROMANCE</button> 
+        <button id="western" onclick="votar(2)">WESTERN</button> 
+        <button id="terror" onclick="votar(3)">TERROR</button> 
+        <button id="drama" onclick="votar(4)">DRAMA</button> 
+        <button id="acao" onclick="votar(5)">AÇÃO</button> 
+
+      </div>
+
+    </div>
+
+    <div class="filmstrip2"></div>
+  </main>
 </body>
 
 </html>

@@ -119,7 +119,7 @@ margin-right: 15%;
 
 }
 
-.text_inside {
+#text_inside {
 
   text-align:center;
   width:55%;
@@ -142,7 +142,7 @@ margin-right: 15%;
 }
 
    
-.genres {
+#genres {
   text-align:center;
   width:55%;
   height:20%;
