@@ -1,7 +1,6 @@
 body {
 
-    background-image: url(images/eKD0a2.jpg);
-    background-color:rgb(54, 54, 54);
+    background-image: url(city.jpg)
 }
 
 
@@ -9,15 +8,16 @@ header {
  width: 90vw;
  height: 15vh;
  margin: auto;
- margin-top: 6vh;
+ margin-top: 8vh;
  border: 3px solid #E3D181;
  border-radius: 15px 15px 0 0;
  color: #fff5cb;
  display: flex;
  align-items:center;
- box-shadow: inset 0.2px 1px 5px 2px #565656, -1px 1px 150px 2px #E3D181;
+ box-shadow: inset 0.2px 1px 5px 2px #565656, -1px 1px 125px 2px #f0e1b4;
  text-shadow: 1px 1px 34px black, 0 0 1em #E3D181, 0 0 0.9em #E3D181;
-background: url(grain.webp);
+ background: linear-gradient(-45deg, #464545, #5C5A5A, #6A6969, #443636, #737373);  
+
 }
 
 header a{
@@ -52,7 +52,7 @@ li {
     display: inline-block;
     margin: 0% 1% 0% 1%;
     font-family: 'Aspergit Bold', sans-serif;
-    font-size: 120%;
+    font-size: 130%;
 
 }
 
@@ -72,51 +72,97 @@ li:hover {
 
 .filmstrip {
 
-  height: 200px;
+  height: 95.9%;
   width:7.1vw;
   background-image: url(filmstrip.gif);
-
+  position: absolute;
+  opacity:0.7;
+  width:7.5vw;
 
 }
 
 .filmstrip2 {
 
-  height: 900px;
-  width:7.1vw;
+  height: 100%;
+  width:7.5vw;
   margin-left:auto;
   background-image: url(filmstrip.gif);
-  opacity:0.8;
+  opacity:0.7;
 
 
 }
 
 main {
     width: 90vw;
-    height: 145vh;
+    height: 96vh;
     margin: auto;
     background-color: rgb(255, 255, 255, 0);    
     border: 3px solid #E3D181;
     border-top:0px;
-
-    box-shadow:-1px 1px 150px 2px #E3D181;
+    box-shadow:-1px 1px 150px 2px #f7e1a0;
     overflow:hidden;
     display:flex;
     flex-direction:row;
+    margin-bottom: 8vh;
 
 
 }
 
-
-
 .video-container video {
-width: 82%;
+width: 91.5%;
 height: 100%;
 margin-top:-2%;
 position: absolute;
 object-fit: cover;
 z-index: -1;
+margin-right: 15%;
 
 }
+
+.text_inside {
+
+  text-align:center;
+  width:55%;
+  height:20%;
+  margin-top: 20%;
+  margin-left:18%;
+
+  font-family: 'Caviar Dreams', sans-serif;
+  font-size: 35px;
+  color: #ffd966;
+  text-shadow: 1px 5px 2px black, 0 0 1em black, 0 0 0.2em black;
+  letter-spacing: 4px;
+  position:absolute;
+  opacity:0;
+
+
+  -webkit-animation: frase1anim 10s;
+  animation: frase1anim 10s;
+
+}
+
+   
+.genres {
+  text-align:center;
+  width:55%;
+  height:20%;
+  margin-top: 20%;
+  margin-left:18%;
+
+  font-family: 'Caviar Dreams', sans-serif;
+  font-size: 35px;
+  color: #ffd966;
+  text-shadow: 1px 5px 2px black, 0 0 1em black, 0 0 0.2em black;
+  letter-spacing: 4px;
+  position:absolute;
+  opacity: 0;
+
+  animation: fadeIn 10s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+
+
+  }
 
 #content-sobre {
   width: 75vw;
@@ -137,177 +183,7 @@ z-index: -1;
   line-height: 1.0cm;
   animation: fadeIn 5s;
 
-   
 }
-
-
-#chaplin-curious {
-
-  margin-left: 70%;
-  margin-top:-67%;
-  opacity: 0.9;
-
-}
-
-
-#buttons {
-clear:both;
-display: flex;
-justify-content:start;
-margin-left: 5%;
-
-
-}
-
-#botao1 {
-
-  color:whitesmoke;
-  border: 3px solid rgb(66, 66, 66);
-  border-radius: 15px;
-  background: linear-gradient(45deg, #ac9b40,#9e8d2c, #8f7e22, #756715, #5e5107);  
-  width: 16%;
-  font-size: 30px;
-  font-family: 'Modum', sans-serif;
-  height: 8vh;
-  margin-right:24%;
-  cursor: pointer;
-  visibility:hidden;
-}
-
-#botao2 {
-
-  color:whitesmoke;
-  border: 3px solid rgb(66, 66, 66);
-  border-radius: 15px;
-  background: linear-gradient(45deg, #ac9b40,#9e8d2c, #8f7e22, #756715, #5e5107);  
-  width: 16%;
-  font-size: 30px;
-  font-family: 'Modum', sans-serif;
-  height: 8vh;
-  margin-right:24%;
-  cursor: pointer;
-}
-
-#botao1:hover {
-
-  color:whitesmoke;
-  background: url('images/grain.webp');  
-}
-
-#botao2:hover {
-
-  color:whitesmoke;
-  background: url('images/grain.webp');  
-}
-
-#texts_subtitles {
-  width: 75%;
-  display: flex;
-  flex-direction:column;
-  margin: auto;
-  text-align:center;
-  font-size: 16px; 
-
-}
-
-.image_text {
-
-  width:400px; 
-  height:253px;
-  border-radius:20px; 
-  box-shadow:-1px 1px 2px 3px rgb(34, 34, 34); 
-
-}
-
-
-#film1 {
-
-    top:-2.5%;
-    left: -5%;
-    height: 13%;
-    width: 80vw;
-    box-shadow:-1px 1px 5px 3px black;
-    position: relative;
-    z-index: 2;
-
-}
-
-#cinema-text2 {
-    width: 75vw;
-    height: 85vh;
-    margin: auto;
-    margin-top: -7.7%;
-
-    font-family: 'Aspergit Bold', sans-serif;
-    font-size: 18px;
-    line-height: 0.8cm;
-
-    color:whitesmoke;
-    background-color:black;
-    border: 3px solid #E3D181;
-    border-top: 0px transparent;
-    box-shadow:-1px 1px 150px 2px #E3D181;
-    background: linear-gradient(180deg, #000000,#212121,#3f3f3fe7, #4d4d4de5, #767676dc);  
-    position: relative;
-    z-index: 1;
-
-}
-
-#cinema-text2-p {
-    float:left;
-    margin-left: 3%;
-    margin-right: 10%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:left;
-    font-weight:bold;
-}
-
-
-#cinema-text2-photos {
-    float: left;
-    padding-top: 11%;
-    width: 25%;
-    text-align:center;
-
-}
-
-
-#photo1 {
-margin-top: -1%;
-border: 6px solid whitesmoke;
-box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-transform: rotate(5deg);
-}
-
-
-#photo2 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(-5deg);
-}
-
-
-#photo3 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(5deg);
-}
-
-
-
-#cinema-text2-p2 {
-    margin-right: 3%;
-    margin-left: 3%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:right;
-    float:right;
-
-}
-
 
 footer {
 
@@ -336,34 +212,57 @@ footer {
 
 }
 
+@keyframes frase1anim {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+ 
+
 @font-face {
 
-font-family: 'Modum';
-src: url('fonts/Modum.eot');
-src: url('fonts/Modum.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Modum.woff2') format('woff2'),
-    url('fonts/Modum.woff') format('woff'),
-    url('fonts/Modum.svg#Modum') format('svg');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
+  font-family: 'Modum';
+  src: url('fonts/Modum.eot');
+  src: url('fonts/Modum.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Modum.woff2') format('woff2'),
+      url('fonts/Modum.woff') format('woff'),
+      url('fonts/Modum.svg#Modum') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  
+  }
+  
+      @font-face {
+  
+          font-family: 'Aspergit Bold';
+          src: url('fonts/AspergitBold.eot');
+          src: url('fonts/AspergitBold.eot?#iefix') format('embedded-opentype'),
+              url('fonts/AspergitBold.woff2') format('woff2'),
+              url('fonts/AspergitBold.woff') format('woff'),
+              url('fonts/AspergitBold.svg#Maia') format('svg');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+          
+          }
 
-}
 
-    @font-face {
-
-        font-family: 'Aspergit Bold';
-        src: url('fonts/AspergitBold.eot');
-        src: url('fonts/AspergitBold.eot?#iefix') format('embedded-opentype'),
-            url('fonts/AspergitBold.woff2') format('woff2'),
-            url('fonts/AspergitBold.woff') format('woff'),
-            url('fonts/AspergitBold.svg#Maia') format('svg');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-        
-        }
-        
-    
-    
-
+          @font-face {
+  
+            font-family: 'Caviar Dreams';
+            src: 
+                url('fonts/caviardreams_bold-webfont.woff2') format('woff2'),
+                url('fonts/caviardreams_bold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            
+            }
+          
