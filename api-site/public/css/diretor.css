@@ -79,6 +79,194 @@ li:hover {
 }
 
 
+#popcorn {
+
+    background-image: url(images/popcornbag.png);
+    background-repeat: no-repeat;
+    height: 53vh;
+    width: 17vw;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+#zona_materializacao {
+
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-right: 5%;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+#dropzone {
+    width: 320px;
+    height: 200px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url(images/fora-do-ar.gif);
+    border: 10px solid black;
+    font-family: 'Modum', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 4px black, 0 0 1em black, 0 0 0.2em black;
+
+}
+
+#legenda {
+
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Aspergit Bold', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.text-description {
+
+    font-size: 22px;
+    margin-right: 5%;
+    line-height: 1.0cm;
+}
+
+#descricao {
+
+    margin-left: 5%;
+    margin-top: 5%;
+    font-family: 'Aspergit Bold', sans-serif;
+    color: black;
+    font-size: 28px;
+}
+
+
+#coluna1 {
+    width: '100%';
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#popcorn_sadness {
+    margin-left: 7.5%;
+    margin-top: 3.5%;
+    position: absolute;
+    height: 10%;
+    width: 6%;
+}
+
+#popcorn_love {
+
+    margin-left: 2%;
+    margin-top: 1.6%;
+    position: absolute;
+    width: 3%;
+    height: 7%;
+}
+
+
+#popcorn_happiness {
+
+    margin-left: 5%;
+    margin-top: -2%;
+    position: absolute;
+    height: 10%;
+    width: 4.5%;
+
+}
+
+#popcorn_fury {
+
+    margin-left: 10%;
+    margin-top: -4%;
+    position: absolute;
+    height: 7.5%;
+    width: 4.5%;
+}
+
+#popcorn_fear {
+
+    margin-left: 13.5%;
+    margin-top: -2%;
+    position: absolute;
+    height: 7%;
+    width: 3.5%;
+}
+
+#essencia_diretor {
+
+    width: 75vw;
+    margin-top: 3.5%;
+    margin-left: -0.3%;
+    border: 3px solid #E3D181;
+    border-bottom: 0px;
+    border-top: 1px solid transparent;
+
+}
+
+h2 {
+
+    background-color: black;
+    color: gold;
+    font-family: 'Aspergit Bold', sans-serif;
+    line-height: 350%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 3%;
+    border-radius: 20px;
+
+}
+
+.imagem_diretor {
+
+    margin-left: 5.5%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 4.5%;
+    float: left;
+    border: 7px solid black;
+
+}
+
+.texto_diretor {
+
+    margin-right: 5.5%;
+    margin-top: 4%;
+    text-align: justify;
+    font-family: 'Aspergit Bold', sans-serif;
+    line-height: 160%;
+    font-size: 20px;
+}
+
+#reset {
+
+    color: whitesmoke;
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ac9b40, #9e8d2c, #8f7e22, #756715, #5e5107);
+    width: 16%;
+    font-size: 30px;
+    font-family: 'Modum', sans-serif;
+    height: 8vh;
+    margin-top: 5%;
+    margin-left: 8.4%;
+    cursor: pointer;
+
+}
+
+#reset:hover {
+
+    color: whitesmoke;
+    background: url(images/grain.webp);
+}
+
+
 footer {
 
     height:8vh; 
