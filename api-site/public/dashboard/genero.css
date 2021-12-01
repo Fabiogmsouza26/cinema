@@ -33,6 +33,7 @@ header a{
  
  }
 
+
 #title-header {
 
     margin-left: 3%;
@@ -73,7 +74,6 @@ li:hover {
 .filmstrip {
 
   height: 95.9%;
-  width:7.1vw;
   background-image: url(filmstrip.gif);
   position: absolute;
   opacity:0.7;
@@ -109,7 +109,7 @@ main {
 }
 
 .video-container video {
-width: 91.5%;
+width: 91.4%;
 height: 100%;
 margin-top:-2%;
 position: absolute;
@@ -160,7 +160,6 @@ margin-right: 15%;
   animation: fadeIn 10s;
   animation-delay: 10s;
   animation-fill-mode: forwards;
-
 
   }
 

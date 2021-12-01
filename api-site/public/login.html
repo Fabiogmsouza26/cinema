@@ -11,7 +11,7 @@
     <script src="./js/funcoes.js"></script>
 
     <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -20,69 +20,46 @@
 
 <body>
 
-    <!--Header-->
+    <header>
+        <p id='title-header'>Cinema</h3>
+        <ul style='list-style-type: none;'>
+            <li>Sobre</li>
+            <li>Contato</li>
+            <li>Que diretor é você?</li>
+            <li>Gerador de paletas</li>
+        </ul>
+    </header>
 
-    <div class="header">
+    <main>
         <div class="container">
-            <h1>AcquaTec</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="./login.html">Login</a>
-                </li>
-                <li>
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="banner-login">
-        <div class="container">
-            <div class="card medio">
                 <h2>Olá de volta!</h2>
                 <div class="formulario">
                     <form id="form_login" method="post" onsubmit="return entrar()">
-                        E-mail:
                         <input name="email" type="text" placeholder="Login">
                         <br>
-                        Senha:
                         <input name="senha" type="password" placeholder="******">
                         <br>
                         <button class="btn" type="submit">
-                            Entrar
+                            ENTRAR
                         </button>
                     </form>
+    </main>
 
 
-                </div>
+    <div id="div_aguardar" class="loading-div" style="display:none">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
+    <div id="div_erros_login">
 
-                <div id="div_erros_login">
-
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno BandTec &copy; 2021</h4>
-        </div>
-    </div>
+    <footer>2021. Feito por Fábio Gomes de Souza.</footer>
+
 
     <!-- modal?
 
