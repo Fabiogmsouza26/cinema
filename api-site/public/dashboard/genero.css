@@ -77,14 +77,14 @@ li:hover {
   background-image: url(filmstrip.gif);
   position: absolute;
   opacity:0.7;
-  width:7.5vw;
+  width:7.11vw;
 
 }
 
 .filmstrip2 {
 
   height: 100%;
-  width:7.5vw;
+  width:7.11vw;
   margin-left:auto;
   background-image: url(filmstrip.gif);
   opacity:0.7;
@@ -109,7 +109,7 @@ main {
 }
 
 .video-container video {
-width: 91.4%;
+width: 91.3%;
 height: 100%;
 margin-top:-2%;
 position: absolute;
@@ -189,10 +189,9 @@ margin-right: 15%;
 footer {
 
     height:8vh; 
-    width: 90vw;
-    margin: auto;
-    margin-bottom: 6vh;
-    margin-top: -8vh;
+    width: 89.99vw;
+    margin-left:3.6vw;
+    margin-top: -8.7vh;
     color: whitesmoke;
     clear:both;
     display: flex;
@@ -201,8 +200,8 @@ footer {
     font-family: 'Aspergit Bold', sans-serif;
     font-size: 18px;
     border: 3px solid #E3D181;
-    border-top: transparent;
     background: linear-gradient(-45deg, #464545, #5C5A5A, #6A6969, #443636, #737373);  
+    position:absolute;
 
 }
 
