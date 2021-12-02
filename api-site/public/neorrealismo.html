@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Frameans - Neorrealismo</title>
+  <link rel="stylesheet" href="neorrealismo.css">
+  <script src="../js/funcoes.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <header>
+    <p id='title-header'>Frameans</p>
+    <ul style='list-style-type: none;'>
+      <li>Sobre</li>
+      <li><a href="./cadastro.html">Cadastro</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <div class="btn-logout" onclick="limparSessao()" style="cursor:pointer"><li>Logout</li></div>
+    </ul>
+  </header>
+
+  <main>
+    @-webkit-keyframes moveDown { 0% {top: 0;}
+100%{top:367px; }
+  </main>
+  <footer>2021. Feito por Fábio Gomes de Souza.</footer><br><br>
+
+</body>
+
+</html>
+
+<script>
+
+  function votar(idGenero) {
+
+    console.log(idGenero)
+
+    fetch("/genero/votar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idGenero: idGenero,
+      })
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+      })
+      .catch(function (resposta) { });
+
+
+  }
+
+</script>

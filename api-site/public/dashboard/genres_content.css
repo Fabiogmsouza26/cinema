@@ -181,28 +181,6 @@ li:hover {
   border: 6px dashed black;
 }
 
-#text_inside {
-
-  text-align:center;
-  width:55%;
-  height:20%;
-  margin-top: 20%;
-  margin-left:18%;
-
-  font-family: 'Caviar Dreams', sans-serif;
-  font-size: 35px;
-  color: #ffd966;
-  text-shadow: 1px 5px 2px black, 0 0 1em black, 0 0 0.2em black;
-  letter-spacing: 4px;
-  position:absolute;
-  opacity:0;
-
-
-  -webkit-animation: frase1anim 10s;
-  animation: frase1anim 10s;
-
-}
-
    
 #genres {
   text-align:center;
@@ -224,29 +202,6 @@ li:hover {
   animation-fill-mode: forwards;
 
   }
-
-  .botao {
-
-    color: whitesmoke;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 15px;
-    background: linear-gradient(45deg, #ac9b40, #9e8d2c, #8f7e22, #756715, #5e5107);
-    width: 18%;
-    font-size: 18px;
-    font-family: 'Caviar Dreams', sans-serif;
-    height: 9vh;
-    margin-top: 2%;
-    cursor: pointer;
-
-}
-
-.botao:hover {
-
-    color: #E3D181;
-    background: url(grain.webp);
-    border: 3px solid #E3D181;
-
-}
 
 footer {
 
