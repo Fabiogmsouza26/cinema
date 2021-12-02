@@ -71,30 +71,9 @@ li:hover {
   justify-content:space-around;
 }
 
-.filmstrip {
-
-  height: 95.9%;
-  background-image: url(filmstrip.gif);
-  position: absolute;
-  opacity:0.7;
-  width:7.11vw;
-
-}
-
-.filmstrip2 {
-
-  height: 100%;
-  width:7.11vw;
-  margin-left:auto;
-  background-image: url(filmstrip.gif);
-  opacity:0.7;
-
-
-}
-
 main {
     width: 90vw;
-    height: 96vh;
+    height: 180vh;
     margin: auto;
     background-color: rgb(255, 255, 255, 0);    
     border: 3px solid #E3D181;
@@ -118,6 +97,20 @@ h3 {
   font-size: 350%;
   animation: fadeIn 12s;
   letter-spacing:3px;
+}
+
+#text_neorrealismo {
+
+  animation: fadeIn 12s;
+Font-family: 'Aspergit Bold', sans-serif;
+font-size:130%;
+line-height: 1.0cm;
+margin-top: 3.5%;
+margin-left: 5%;
+margin-right:5%;
+margin-bottom: 4%;
+
+
 }
 
 footer {
