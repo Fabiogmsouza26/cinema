@@ -19,9 +19,9 @@
   <header>
     <p id='title-header'>Frameans</p>
     <ul style='list-style-type: none;'>
-      <li>Sobre</li>
-      <li><a href="./cadastro.html">Cadastro</a></li>
-      <li><a href="./login.html">Login</a></li>
+      <li>Dogma 95</li>
+      <li><a href="./neorrealismo.html">Neorrealismo Italiano</a></li>
+      <li><a href="">Cinema Soviético</a></li>
       <div class="btn-logout" onclick="limparSessao()" style="cursor:pointer"><li>Logout</li></div>
     </ul>
   </header>
@@ -35,16 +35,17 @@
 <p>O Neorrealismo italiano foi um movimento cinematográfico que despontou nos anos 1940, 
   caracterizado por histórias sobre a classe trabalhadora, filmadas com pouquíssimos 
   recursos. A maioria tratava de temas como as dificuldades econômicas e sociais na 
-  Itália pós-Segunda Guerra Mundial (1939 a 1945). Os filmes buscavam representar a 
+  Itália pós-Segunda Guerra Mundial. Os filmes buscavam representar a 
   mudança de mentalidade dos italianos e suas condições de vida, retratando o 
-  desespero, a opressão e a desigualdade que eles enfrentavam.</p>
-
-  <p>O movimento surgiu em uma época na qual o principal estúdio de produção 
-  cinematográfica italiano, a Cinecittà, havia sido bombardeado pelos 
-  inimigos de Benito Mussolini. Nesse contexto, um grupo de cineastas resolveu ir às 
-  ruas, em locações reais, usando iluminação natural e o mínimo de equipamentos, 
-  frequentemente com atores não profissionais, para capturar as histórias da população 
-  mais humilde.</p>
+  desespero, a opressão e a desigualdade que eles enfrentavam.
+</p>
+<p>
+  O movimento surgiu em uma época na qual o principal estúdio de produção 
+  cinematográfica italiano, a Cinecittà, havia sido bombardeado pelos inimigos 
+  e Benito Mussolini. Nesse contexto, um grupo de cineastas resolveu ir às ruas, 
+  em locações reais, usando iluminação natural e o mínimo de equipamentos, 
+  frequentemente com atores não profissionais, para capturar as histórias da 
+  população mais humilde.</p>
 </div>
   </main>
   <footer>2021. Feito por Fábio Gomes de Souza.</footer><br><br>
@@ -53,28 +54,3 @@
 
 </html>
 
-<script>
-
-  function votar(idGenero) {
-
-    console.log(idGenero)
-
-    fetch("/genero/votar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        idGenero: idGenero,
-      })
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-      })
-      .catch(function (resposta) { });
-
-
-  }
-
-</script>
