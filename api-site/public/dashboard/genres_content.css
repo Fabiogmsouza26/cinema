@@ -93,40 +93,92 @@ li:hover {
 
 }
 
-main {
+#principal {
+
     width: 90vw;
     height: 100vh;
     margin: auto;
-    background-color: rgb(255, 255, 255, 0);    
+    display: flex;
+    align-items:center;
+
+    background: linear-gradient(90deg, #dcdcdce8,#e4e4e4, #e6e6e6f8, #ffffff, #ffffff, #ffffff);  
     border: 3px solid #E3D181;
     border-top:0px;
     box-shadow:-1px 1px 150px 2px #f7e1a0;
-    margin-bottom: 8vh;
 
 }
 
-#screen {
 
-  width:85%;
-  height:70%;
-  background-color: whitesmoke;
-  border: 15px solid black;
-  animation: moveDown;
-  animation-timing-function: ease-in;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
+#container_content {
+
+  display: flex;
+  align-items:center;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 90%;
+  margin:auto;
 
 }
 
-.video-container video {
-width: 91.3%;
-height: 100%;
-margin-top:-2%;
-position: absolute;
-object-fit: cover;
-z-index: -1;
-margin-right: 15%;
+#container_text{
 
+  width: 65%;
+  height: 70%;
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+
+}
+
+#genre_title {
+
+  font-family: 'Modum', sans-serif;
+  font-size: 400%;
+  color:#E3D181;
+  margin-right: auto;
+  width:95%;
+  display: flex;
+  align-items:center;
+  background:url(grain.webp);
+  border-radius: 15px;
+  padding-left:3%;
+
+}
+
+#genre_text {
+
+  font-family: 'Aspergit Bold', sans-serif;
+  font-size: 140%;
+  color: #000000;
+  line-height: 1.0cm;
+  margin-right:1.5%;
+  margin-bottom:5%;
+
+}
+
+#imgs_text {
+
+  height: 70%;
+  width:25%;
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+
+}
+
+.img1 {
+
+  transform: rotate(5deg);
+  width:95%;
+  border: 6px dashed black;
+
+}
+
+.img2 {
+
+  transform: rotate(-5deg);
+  width:95%;
+  border: 6px dashed black;
 }
 
 #text_inside {
@@ -200,7 +252,7 @@ footer {
 
     height:8vh; 
     width: 89.99vw;
-    margin-left:3.6vw;
+    margin-left:3.5vw;
     margin-top: -8.7vh;
     color: whitesmoke;
     clear:both;
@@ -217,7 +269,7 @@ footer {
 
 
 @keyframes moveDown {0% {height: 0;}
-100%{height: 70%; }
+100%{height: 40%; }
 }
 
 
