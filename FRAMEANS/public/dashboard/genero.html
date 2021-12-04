@@ -22,36 +22,56 @@
       <li>Dogma 95</li>
       <li><a href="./neorrealismo.html">Neorrealismo Italiano</a></li>
       <li><a href="">Cinema Soviético</a></li>
-      <div class="btn-logout" onclick="limparSessao()" style="cursor:pointer"><li>Logout</li></div>
+      <div class="btn-logout" onclick="limparSessao()" style="cursor:pointer">
+        <li>Logout</li>
+      </div>
     </ul>
   </header>
 
   <main>
-    <div class="filmstrip"></div>
-    <div class="video-container">
-      <video autoplay muted loop>
-        <source src="videoplayback.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div id="text_inside">BEM-VINDO! TER VOCÊ É UMA FESTA SEM FIM!</div>
-
-    <div id="genres">ESCOLHA SEU GÊNERO FAVORITO<br><br>
-
-      <div id="moviegenres">
-        <button id="romance" class="botao" onclick="votar(1);location.href='romance.html';">ROMANCE</button> 
-        <button id="western" class="botao" onclick="votar(2);location.href='western.html';">WESTERN</button> 
-        <button id="terror" class="botao" onclick="votar(3);location.href='terror.html';">TERROR</button> 
-        <button id="drama" class="botao" onclick="votar(4);location.href='drama.html';">DRAMA</button> 
-        <button id="acao" class="botao" onclick="votar(5);location.href='acao.html';">AÇÃO</button> 
+    <div id="principal">
+      <div class="filmstrip"></div>
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="videoplayback.mp4" type="video/mp4" />
+        </video>
       </div>
+      <div id="text_inside">BEM-VINDO! TER VOCÊ É UMA FESTA SEM FIM!</div>
 
+      <div id="genres">ESCOLHA SEU GÊNERO FAVORITO<br><br>
+
+        <div id="moviegenres">
+          <button id="romance" class="botao" onclick="votar(1);location.href='romance.html';">ROMANCE</button>
+          <button id="western" class="botao" onclick="votar(2);location.href='western.html';">WESTERN</button>
+          <button id="terror" class="botao" onclick="votar(3);location.href='terror.html';">TERROR</button>
+          <button id="drama" class="botao" onclick="votar(4);location.href='drama.html';">DRAMA</button>
+          <button id="acao" class="botao" onclick="votar(5);location.href='acao.html';">AÇÃO</button>
+        </div>
+      </div>
+      <div class="filmstrip2"></div>
     </div>
-
-    <div class="filmstrip2"></div>
+    <footer>2021. Feito por Fábio Gomes de Souza.</footer>
   </main>
-  <footer>2021. Feito por Fábio Gomes de Souza.</footer><br><br>
-
 </body>
 
 </html>
 
+
+<script>
+  carrega();
+
+  function votar(idGenero) {
+    console.log(idGenero);
+
+    fetch("/genero/votar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idGenero: idGenero,
+      }),
+    })
+      .catch(function (resposta) { });
+  }
+</script>

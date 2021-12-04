@@ -76,20 +76,24 @@ li:hover {
 
 main {
     width: 75vw;
-    height: 120vh;
+    height: 97.5vh;
     margin: auto;
     border: 3px solid #E3D181;
     border-bottom: 0px;
     border-top: 1px solid transparent;
-    background: linear-gradient(45deg, #000000,#212121,#3f3f3fe7, #4d4d4de5, #767676dc);  
+    background: rgba(146, 146, 146, 0.4);  
     box-shadow:-1px 1px 150px 2px #E3D181;
     overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
 
 }
 
 .formulario {
 
-    width: 75%;
+    width: 100%;
     margin: auto;
     text-align: center;
     position: relative;
@@ -100,10 +104,12 @@ main {
 
     font-family: 'Modum', sans-serif;
     text-align:center;
-    font-size: 40px;
+    font-size: 45px;
     color: #E3D181;
     margin-bottom: 2.5%;
     margin-top: 5%;
+    text-shadow: 1px 5px 2px black, 0 0 1em black, 0 0 0.2em black;
+    letter-spacing:3px;
 
 }
 
@@ -176,77 +182,17 @@ select option {
 }
 
 
-#cinema-text2 {
-    width: 75vw;
-    height: 85vh;
-    margin: auto;
-
-    font-family: 'Aspergit Bold', sans-serif;
-    font-size: 18px;
-    line-height: 0.8cm;
-
-    color:whitesmoke;
-    background-color:black;
-    border: 3px solid #E3D181;
-    border-top: 0px transparent;
-    box-shadow:-1px 1px 150px 2px #E3D181;
-    background: linear-gradient(180deg, #000000,#212121,#3f3f3fe7, #4d4d4de5, #767676dc);  
-}
-
-#cinema-text2-p {
-    float:left;
-    margin-left: 3%;
-    margin-right: 10%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:left;
-    font-weight:bold;
-}
-
-
-#cinema-text2-photos {
-    float: left;
-    padding-top: 11%;
-    width: 25%;
-    text-align:center;
-
-}
-
-
-#photo1 {
-margin-top: -1%;
-border: 6px solid whitesmoke;
-box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-transform: rotate(5deg);
-}
-
-
-#photo2 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(-5deg);
-}
-
-
-#photo3 {
-    margin-top: -1%;
-    border: 6px solid whitesmoke;
-    box-shadow:-1px 1px 10px 3px rgb(34, 34, 34);
-    transform: rotate(5deg);
-}
-
-
-
-#cinema-text2-p2 {
-    margin-right: 3%;
-    margin-left: 3%;
-    padding-top: 8%;
-    width: 25%;
-    text-align:right;
-    float:right;
-
-}
+.video-container video {
+    width: 76%;
+    height: 100%;
+    margin-top:-5%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    right: 12%;
+    top: 30%;
+    
+    }
 
 
 footer {
